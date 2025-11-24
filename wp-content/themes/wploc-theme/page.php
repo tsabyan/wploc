@@ -4,7 +4,7 @@
  * Template for displaying all pages
  * This is the template Elementor will use when building pages
  *
- * @package Custom_Theme
+ * @package WPLoc_Theme
  */
 
 get_header();
@@ -43,7 +43,7 @@ get_header();
                             the_content();
 
                             wp_link_pages(array(
-                                'before' => '<div class="page-links">' . esc_html__('Pages:', 'custom-theme'),
+                                'before' => '<div class="page-links">' . esc_html__('Pages:', 'wploc-theme'),
                                 'after'  => '</div>',
                             ));
                             ?>

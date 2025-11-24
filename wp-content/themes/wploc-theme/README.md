@@ -1,4 +1,4 @@
-# Custom Theme
+# WPLoc Theme
 
 A simple, minimalist WordPress theme designed to work seamlessly with Elementor page builder.
 
@@ -44,7 +44,7 @@ When using Elementor:
 ## Theme Structure
 
 ```
-custom-theme/
+wploc-theme/
 ├── style.css          # Main stylesheet with theme info
 ├── functions.php      # Theme functionality and Elementor support
 ├── header.php         # Header template

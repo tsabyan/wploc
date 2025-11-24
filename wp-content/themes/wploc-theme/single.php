@@ -3,7 +3,7 @@
 /**
  * Template for displaying single posts
  *
- * @package Custom_Theme
+ * @package WPLoc_Theme
  */
 
 get_header();
@@ -27,14 +27,14 @@ get_header();
                                 <?php echo get_the_date(); ?>
                             </span>
                             <span class="byline">
-                                <?php echo esc_html__('by', 'custom-theme'); ?>
+                                <?php echo esc_html__('by', 'wploc-theme'); ?>
                                 <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>">
                                     <?php the_author(); ?>
                                 </a>
                             </span>
                             <?php if (has_category()) : ?>
                                 <span class="cat-links">
-                                    <?php echo esc_html__('in', 'custom-theme'); ?>
+                                    <?php echo esc_html__('in', 'wploc-theme'); ?>
                                     <?php the_category(', '); ?>
                                 </span>
                             <?php endif; ?>
@@ -52,7 +52,7 @@ get_header();
                         the_content();
 
                         wp_link_pages(array(
-                            'before' => '<div class="page-links">' . esc_html__('Pages:', 'custom-theme'),
+                            'before' => '<div class="page-links">' . esc_html__('Pages:', 'wploc-theme'),
                             'after'  => '</div>',
                         ));
                         ?>
@@ -61,7 +61,7 @@ get_header();
                     <?php if (has_tag()) : ?>
                         <footer class="entry-footer">
                             <div class="tags-links">
-                                <?php the_tags('<strong>' . esc_html__('Tags:', 'custom-theme') . '</strong> ', ', ', ''); ?>
+                                <?php the_tags('<strong>' . esc_html__('Tags:', 'wploc-theme') . '</strong> ', ', ', ''); ?>
                             </div>
                         </footer><!-- .entry-footer -->
                     <?php endif; ?>
@@ -70,8 +70,8 @@ get_header();
             <?php
                 // Post navigation
                 the_post_navigation(array(
-                    'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'custom-theme') . '</span> <span class="nav-title">%title</span>',
-                    'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'custom-theme') . '</span> <span class="nav-title">%title</span>',
+                    'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'wploc-theme') . '</span> <span class="nav-title">%title</span>',
+                    'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'wploc-theme') . '</span> <span class="nav-title">%title</span>',
                 ));
 
                 // If comments are open or we have at least one comment, load up the comment template.

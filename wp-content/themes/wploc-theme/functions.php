@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Custom Theme Functions
+ * WPLoc Theme Functions
  *
- * @package Custom_Theme
+ * @package WPLoc_Theme
  */
 
 if (! defined('ABSPATH')) {
@@ -13,7 +13,7 @@ if (! defined('ABSPATH')) {
 /**
  * Theme Setup
  */
-function custom_theme_setup()
+function wploc_theme_setup()
 {
     // Add default posts and comments RSS feed links to head
     add_theme_support('automatic-feed-links');
@@ -43,7 +43,7 @@ function custom_theme_setup()
 
     // Register navigation menus
     register_nav_menus(array(
-        'primary' => esc_html__('Primary Menu', 'custom-theme'),
+        'primary' => esc_html__('Primary Menu', 'wploc-theme'),
     ));
 
     // Switch default core markup to output valid HTML5
@@ -57,42 +57,42 @@ function custom_theme_setup()
         'script',
     ));
 }
-add_action('after_setup_theme', 'custom_theme_setup');
+add_action('after_setup_theme', 'wploc_theme_setup');
 
 /**
  * Enqueue scripts and styles
  */
-function custom_theme_scripts()
+function wploc_theme_scripts()
 {
     // Enqueue theme stylesheet
-    wp_enqueue_style('custom-theme-style', get_stylesheet_uri(), array(), '1.0.0');
+    wp_enqueue_style('wploc-theme-style', get_stylesheet_uri(), array(), '1.0.0');
 
     // Enqueue comment reply script if needed
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
 }
-add_action('wp_enqueue_scripts', 'custom_theme_scripts');
+add_action('wp_enqueue_scripts', 'wploc_theme_scripts');
 
 /**
  * Elementor Support
  */
-function custom_theme_elementor_support()
+function wploc_theme_elementor_support()
 {
     // Add Elementor support for post types
     add_post_type_support('page', 'elementor');
     add_post_type_support('post', 'elementor');
 }
-add_action('after_setup_theme', 'custom_theme_elementor_support');
+add_action('after_setup_theme', 'wploc_theme_elementor_support');
 
 /**
  * Register Elementor locations
  */
-function custom_theme_register_elementor_locations($elementor_theme_manager)
+function wploc_theme_register_elementor_locations($elementor_theme_manager)
 {
     $elementor_theme_manager->register_all_core_location();
 }
-add_action('elementor/theme/register_locations', 'custom_theme_register_elementor_locations');
+add_action('elementor/theme/register_locations', 'wploc_theme_register_elementor_locations');
 
 /**
  * Set content width
@@ -104,7 +104,7 @@ if (! isset($content_width)) {
 /**
  * Add body classes for Elementor
  */
-function custom_theme_body_classes($classes)
+function wploc_theme_body_classes($classes)
 {
     // Add class if Elementor is being used on this page
     if (class_exists('\Elementor\Plugin')) {
@@ -115,22 +115,22 @@ function custom_theme_body_classes($classes)
     }
     return $classes;
 }
-add_filter('body_class', 'custom_theme_body_classes');
+add_filter('body_class', 'wploc_theme_body_classes');
 
 /**
  * Excerpt length
  */
-function custom_theme_excerpt_length($length)
+function wploc_theme_excerpt_length($length)
 {
     return 30;
 }
-add_filter('excerpt_length', 'custom_theme_excerpt_length');
+add_filter('excerpt_length', 'wploc_theme_excerpt_length');
 
 /**
  * Excerpt more
  */
-function custom_theme_excerpt_more($more)
+function wploc_theme_excerpt_more($more)
 {
     return '...';
 }
-add_filter('excerpt_more', 'custom_theme_excerpt_more');
+add_filter('excerpt_more', 'wploc_theme_excerpt_more');

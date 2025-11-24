@@ -3,7 +3,7 @@
 /**
  * The main template file
  *
- * @package Custom_Theme
+ * @package WPLoc_Theme
  */
 
 get_header();
@@ -46,7 +46,7 @@ get_header();
                                         <?php echo get_the_date(); ?>
                                     </span>
                                     <span class="byline">
-                                        <?php echo esc_html__('by', 'custom-theme'); ?>
+                                        <?php echo esc_html__('by', 'wploc-theme'); ?>
                                         <?php the_author(); ?>
                                     </span>
                                 </div>
@@ -65,14 +65,14 @@ get_header();
                                 the_content();
 
                                 wp_link_pages(array(
-                                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'custom-theme'),
+                                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'wploc-theme'),
                                     'after'  => '</div>',
                                 ));
                             else :
                                 the_excerpt();
                             ?>
                                 <a href="<?php echo esc_url(get_permalink()); ?>" class="read-more">
-                                    <?php echo esc_html__('Read More', 'custom-theme'); ?>
+                                    <?php echo esc_html__('Read More', 'wploc-theme'); ?>
                                 </a>
                             <?php endif; ?>
                         </div><!-- .entry-content -->
@@ -84,19 +84,19 @@ get_header();
                 // Pagination
                 the_posts_pagination(array(
                     'mid_size'  => 2,
-                    'prev_text' => esc_html__('&larr; Previous', 'custom-theme'),
-                    'next_text' => esc_html__('Next &rarr;', 'custom-theme'),
+                    'prev_text' => esc_html__('&larr; Previous', 'wploc-theme'),
+                    'next_text' => esc_html__('Next &rarr;', 'wploc-theme'),
                 ));
 
             else :
                 ?>
                 <section class="no-results not-found">
                     <header class="page-header">
-                        <h1 class="page-title"><?php esc_html_e('Nothing Found', 'custom-theme'); ?></h1>
+                        <h1 class="page-title"><?php esc_html_e('Nothing Found', 'wploc-theme'); ?></h1>
                     </header>
 
                     <div class="page-content">
-                        <p><?php esc_html_e('It seems we can&rsquo;t find what you&rsquo;re looking for.', 'custom-theme'); ?></p>
+                        <p><?php esc_html_e('It seems we can&rsquo;t find what you&rsquo;re looking for.', 'wploc-theme'); ?></p>
                     </div>
                 </section>
             <?php
