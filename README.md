@@ -42,7 +42,7 @@ This is a Docker-based WordPress development environment with MySQL and phpMyAdm
 
 ## Project Structure
 
-- `wordpress/` - WordPress files will be installed here
+- `./` - WordPress files will be installed here
 - `docker-compose.yml` - Docker configuration
 - Database data is stored in a Docker volume
 

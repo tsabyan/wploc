@@ -9,20 +9,21 @@
 # WordPress Config
 wp-config.php
 
-# WordPress Content - Ignore everything except themes
+# WordPress Content - Ignore everything except themes and plugins
 /wp-content/*
 !/wp-content/themes/
 /wp-content/themes/*
-!/wp-content/themes/your-theme-name/
+!/wp-content/themes/wploc-theme/
+
+!/wp-content/plugins/
+/wp-content/plugins/*
+# !/wp-content/plugins/wploc-elements/
 
 # Uploads and Cache
 /wp-content/uploads/
 /wp-content/cache/
 /wp-content/backup*/
 /wp-content/upgrade/
-
-# Plugins (ignore all, uncomment if you want to track specific plugins)
-/wp-content/plugins/
 
 # Docker volumes
 db_data/
