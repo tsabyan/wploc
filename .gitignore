@@ -1,0 +1,40 @@
+# WordPress Core Files
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/xmlrpc.php
+/readme.html
+/license.txt
+
+# WordPress Config
+wp-config.php
+
+# WordPress Content - Ignore everything except themes
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/your-theme-name/
+
+# Uploads and Cache
+/wp-content/uploads/
+/wp-content/cache/
+/wp-content/backup*/
+/wp-content/upgrade/
+
+# Plugins (ignore all, uncomment if you want to track specific plugins)
+/wp-content/plugins/
+
+# Docker volumes
+db_data/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
